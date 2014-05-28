@@ -1,5 +1,4 @@
 .idea/
-vendor
 composer.json
 database-settings.json
 bin
