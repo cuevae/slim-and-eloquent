@@ -7,9 +7,10 @@
  */
 
 namespace Models;
-use Interfaces\User as IUser;
+use \Interfaces\User as IUser;
 
 class User implements IUser {
+//class User {
 
     public function __construct( $name )
     {
