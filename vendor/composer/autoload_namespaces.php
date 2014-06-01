@@ -17,7 +17,6 @@ return array(
     'Slim' => array($vendorDir . '/slim/slim'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'PhpSpec' => array($vendorDir . '/phpspec/phpspec/src'),
-    'Models' => array($baseDir . '/app/models'),
     'Illuminate\\Support' => array($vendorDir . '/illuminate/support'),
     'Illuminate\\Events' => array($vendorDir . '/illuminate/events'),
     'Illuminate\\Database' => array($vendorDir . '/illuminate/database'),
@@ -26,5 +25,4 @@ return array(
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
     'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
     'Behat\\Behat' => array($vendorDir . '/behat/behat/src'),
-    '' => array($baseDir . '/src'),
 );

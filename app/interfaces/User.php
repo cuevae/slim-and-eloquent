@@ -6,10 +6,12 @@
  * Time: 11:14
  */
 
-namespace Interfaces;
+namespace App\Interfaces;
 
 interface User {
 
-    public function __construct( $name );
+    public function __construct( $name, $surname );
+    public function getName();
+    public function getSurname();
 
 } 

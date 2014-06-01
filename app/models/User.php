@@ -6,14 +6,32 @@
  * Time: 11:40
  */
 
-namespace Models;
-use \Interfaces\User as IUser;
+namespace App\Models;
 
-class User implements IUser {
-//class User {
+use App\Interfaces\User as IUser;
 
-    public function __construct( $name )
+class User implements IUser
+{
+
+    protected $_name;
+    protected $_surname;
+
+    public function __construct( $name, $surname )
     {
-        // TODO: Implement __construct() method.
+        $this->_name = $name;
+        $this->_surname = $surname;
     }
+
+    public function getName()
+    {
+        return $this->_name;
+    }
+
+    public function getSurname()
+    {
+        return $this->_surname;
+    }
+
+
+
 }
