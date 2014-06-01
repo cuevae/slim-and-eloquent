@@ -1,3 +1,3 @@
 .idea/
 composer.json
-database-settings.json
+db_settings.json

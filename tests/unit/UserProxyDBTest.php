@@ -26,4 +26,15 @@ class UserProxyDBTest extends PHPUnit_Framework_TestCase
         $proxy = new App\Proxies\User\DB( "testName", "testSurname" );
         $this->assertEquals( "testSurname", $proxy->getSurname() );
     }
+
+    public function testUserSaveStub()
+    {
+        $stub = $this->getMockBuilder( "\\App\\Proxies\\User\\DB" )
+                     ->setConstructorArgs( array( "testName", "testSurname" ) )
+                     ->getMock();
+
+        $stub->expects( $this->once() )->method( "save" )->will( $this->returnValue( true ) );
+
+        $stub->save();
+    }
 } 

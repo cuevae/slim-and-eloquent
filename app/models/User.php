@@ -16,17 +16,27 @@ class User implements IUser
     protected $_name;
     protected $_surname;
 
+    /**
+     * @param $name
+     * @param $surname
+     */
     public function __construct( $name, $surname )
     {
         $this->_name = $name;
         $this->_surname = $surname;
     }
 
+    /**
+     * @return string
+     */
     public function getName()
     {
         return $this->_name;
     }
 
+    /**
+     * @return string
+     */
     public function getSurname()
     {
         return $this->_surname;

@@ -10,8 +10,20 @@ namespace App\Interfaces;
 
 interface User {
 
+    /**
+     * @param $name
+     * @param $surname
+     */
     public function __construct( $name, $surname );
+
+    /**
+     * @return string
+     */
     public function getName();
+
+    /**
+     * @return string
+     */
     public function getSurname();
 
 } 
