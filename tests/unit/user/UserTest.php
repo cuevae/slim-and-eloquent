@@ -6,7 +6,7 @@ class UserTest extends PHPUnit_Framework_TestCase
     public function testUserGetsCreated()
     {
         $user = new App\Models\User( "testName", "testSurname" );
-        $this->assertInstanceOf( "Models\\User", $user );
+        $this->assertInstanceOf( "\\App\\Models\\User", $user );
     }
 
     public function testGetName()

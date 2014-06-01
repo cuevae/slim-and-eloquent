@@ -6,7 +6,7 @@
  * Date: 01/06/14
  * Time: 12:52
  */
-class UserProxyDBTest extends PHPUnit_Framework_TestCase
+class DBTest extends PHPUnit_Framework_TestCase
 {
 
     public function testConstruct()
