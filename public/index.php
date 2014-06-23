@@ -1,33 +1,18 @@
 <?php
+
 require '../vendor/autoload.php';
 
-use Illuminate\Database\Capsule\Manager as Capsule;
-use Illuminate\Events\Dispatcher;
-use Illuminate\Container\Container;
+const ENVIRONMENT = 'development';
+const SLIM_CONFIG_PATH = 'config/slim/app-config.json';
 
-$app = new \Slim\Slim();
+$configLoader = json_decode( file_get_contents( SLIM_CONFIG_PATH ), true );
+$appConfig = $configLoader[ENVIRONMENT];
 
-$capsule = new Capsule;
+$app = new \Slim\Slim( $appConfig );
 
-$capsule->addConnection([
-                            'driver'    => 'mysql',
-                            'host'      => 'localhost',
-                            'database'  => 'test',
-                            'username'  => 'root',
-                            'password'  => '',
-                            'charset'   => 'utf8',
-                            'collation' => 'utf8_unicode_ci',
-                            'prefix'    => '',
-                        ]);
+$app->get( '/hello/:name', function ( $name ) {
+    echo "Hello, $name";
+} );
 
-$capsule->setEventDispatcher(new Dispatcher(new Container));
-//$capsule->setCacheManager();
-$capsule->setAsGlobal();
-$capsule->bootEloquent();
-
-Capsule::table('');
-
-$app->get('/hello/:name', function( $name ){
-    echo "Hej {$name}!";
-});
 $app->run();
+

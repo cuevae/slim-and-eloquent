@@ -1,0 +1,23 @@
+{
+    "development":[
+        {
+            "mode":"development",
+            "debug":true,
+            "log.writer":""
+        }
+    ],
+    "test":[
+        {
+            "mode":"test",
+            "debug":false,
+            "log.writer":""
+        }
+    ],
+    "production":[
+        {
+            "mode":"production",
+            "debug":false,
+            "log.writer":""
+        }
+    ]
+}

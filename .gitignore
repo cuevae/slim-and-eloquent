@@ -1,3 +1,4 @@
 .idea/
 composer.json
 db_settings.json
+app-config.json
